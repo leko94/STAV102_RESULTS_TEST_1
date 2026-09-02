@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAV102 — Results for Test 1 | Nelson Mandela University</title>
+<meta name="description" content="STAV102 Business Statistics — Test 1 results portal, Nelson Mandela University">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <main class="stage">
+
+    <!-- ============ COVER (your image, used as-is) ============ -->
+    <section id="coverState" class="cover">
+      <div class="cover__frame">
+        <img src="assets/cover.png" alt="Nelson Mandela University — Department of Statistics — STAV102 Business Statistics — Results for Test 1" class="cover__img">
+
+        <form id="lookupForm" class="cover__form">
+          <label class="sr-only" for="studentNumber">Student number</label>
+          <input
+            type="text"
+            id="studentNumber"
+            class="cover__input"
+            placeholder="e.g. 123456789"
+            inputmode="numeric"
+            autocomplete="off"
+            maxlength="12"
+          />
+          <button id="searchBtn" type="submit" class="cover__btn" aria-label="View results" disabled></button>
+        </form>
+      </div>
+
+      <p id="lookupStatus" class="cover__status" aria-live="polite">Loading results data&hellip;</p>
+    </section>
+
+    <!-- ============ RESULT ============ -->
+    <section id="resultState" class="result-page" hidden>
+      <div class="result-page__inner">
+        <div id="resultCard" class="result">
+          <div class="result__top">
+            <div>
+              <p class="result__label">Student</p>
+              <p id="resStudentName" class="result__name">—</p>
+              <p id="resStudentNumber" class="result__number">—</p>
+            </div>
+            <div id="resBadge" class="result__badge">—</div>
+          </div>
+
+          <div id="resMarksGrid" class="result__marks">
+            <div class="result__mark">
+              <p class="result__mark-label">Long Question <span>/29</span></p>
+              <p id="resLQ" class="result__mark-value">—</p>
+            </div>
+            <div class="result__mark">
+              <p class="result__mark-label">MCQ <span>/21</span></p>
+              <p id="resMCQ" class="result__mark-value">—</p>
+            </div>
+            <div class="result__mark result__mark--final">
+              <p class="result__mark-label">Final mark <span>/50</span></p>
+              <p id="resFinal" class="result__mark-value">—</p>
+            </div>
+            <div class="result__mark result__mark--pct">
+              <p class="result__mark-label">Percentage</p>
+              <p id="resPct" class="result__mark-value">—</p>
+            </div>
+          </div>
+
+          <div id="resComment" class="result__comment"></div>
+
+          <div id="resOfficeNotice" class="result__notice" hidden>
+            <strong>Please come and see me:</strong>
+            Mr N. Ngcobo — Office 07 02 38
+          </div>
+        </div>
+
+        <div class="result__reminder">
+          <div class="result__reminder-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#F2A900" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#F2A900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="result__reminder-title">Test 2 reminder</p>
+            <p class="result__reminder-text">Friday, 10 October 2026 · 11:00 AM – 12:30 PM</p>
+          </div>
+        </div>
+
+        <button id="searchAgainBtn" class="result__again">Look up another student number</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
